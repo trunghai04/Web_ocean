@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    
+}
+/* Phần địa chỉ và hỗ trợ */
+.top-bar {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .address {
+    font-size: 14px;
+    color: #555;
+}
+
+.top-bar .list-nav1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-bar .list-nav1 .nav-item {
+    margin-left: 15px;
+}
+
+.top-bar .list-nav1 .nav-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.top-bar .list-nav1 .nav-link:hover {
+    color: #000;
+}
+
+/* Phần menu chính */
+.navbar {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    height: 50px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 5px 10px;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    color: #000;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.info-box img {
+    margin-right: 10px;
+}
+
+.info-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Phần menu điều hướng và hotline */
+.main-menu {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.main-menu .list-nav2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu .list-nav2 .nav-item {
+    margin: 0 10px;
+}
+
+.main-menu .list-nav2 .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.main-menu .list-nav2 .nav-link:hover {
+    color: red;
+}
+
+/* Dropdown menu */
+.dropdown-menu-lg {
+    width: 800px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: none;
+    overflow: visible;
+}
+
+.dropdown-menu-lg .table-responsive {
+    max-height: none;
+    overflow: visible;
+}
+
+.dropdown-menu-lg .table {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: collapse;
+}
+
+.dropdown-menu-lg .table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid red;
+}
+
+.dropdown-menu-lg .table tbody tr:hover {
+    background-color: #000;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Phần hotline, giỏ hàng và tài khoản */
+.main-menu .list-nav2 .nav-item.sangphai {
+    margin-left: auto;
+}
+
+.main-menu .list-nav2 .nav-item.sangphai .nav-link {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+
+.main-menu .list-nav2 .nav-item.sangphai .nav-link.hotline {
+    background: linear-gradient(to bottom, red, red);
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+.main-menu .list-nav2 .nav-item.sangphai .nav-link:hover {
+    background-color: darkred;
+}
+
+/* Loại bỏ đường kẻ trong bảng */
+.dropdown-menu-lg .table {
+    border-collapse: collapse;
+    /* Gộp viền của các ô */
+}
+
+.dropdown-menu-lg .table td {
+    border: none;
+    /* Loại bỏ viền của các ô */
+    padding: 10px;
+}
+
+/* Hoặc nếu bạn muốn thêm hiệu ứng hover cho từng ô */
+.dropdown-menu-lg .table tbody td:hover {
+    color: #ff0000;
+    /* Đổi màu chữ khi hover */
+}
+
+/* Hiển thị dropdown menu khi hover vào "Sản phẩm" */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu-lg .table tbody th {
+    background-color: orange;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list-nav1 {
+        margin-top: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .main-menu .list-nav2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-menu .list-nav2 .nav-item {
+        margin: 10px 0;
+    }
+
+    .main-menu .list-nav2 .nav-item.sangphai {
+        margin-left: 0;
+    }
+}
+
